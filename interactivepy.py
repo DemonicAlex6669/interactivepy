@@ -6,7 +6,17 @@ class Note:
 
 
 Def main():
-    ...
+    option = input("which option: ")
+    while option != "quit":
+        if option == "options":
+            ...
+        elif option == "":
+            ...
+        elif ...:
+            ...
+        else ...:
+            ...
+        option = input("which option: ")
 
 
 If __name__ == "__main__":

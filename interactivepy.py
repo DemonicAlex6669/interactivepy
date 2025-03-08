@@ -15,14 +15,19 @@ Def main():
     topics = []
     notes = [] #list of note objects
 
+    ...
+    topics += self._topic
+
     option = input("which option: ")
     while option != "quit":
         if option == "options":
             ...
-        elif option == "":
-            ...
-        elif ...:
-            ...
+        elif option == "topics":
+            print(f"{topics}")
+        elif option == "note":
+            choice = input("which note: ")
+            if choice ...: #if choice in note object
+                print(...)
         else ...:
             ...
         option = input("which option: ")

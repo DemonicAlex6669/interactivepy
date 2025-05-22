@@ -1,36 +1,20 @@
-class Note:
-    def __init__():
-        self._this = ...
-        self._topic = ...
-        self._name = ...
-        self._code = ...
-        self._additional = ...
-        self__notes = ...
-        self._interactive = ... #add specific symbol where to input text, so a latter method can let you type there
-    def ...:
-        ...
-
+include pandas as pd
 
 Def main():
-    topics = []
-    notes = [] #list of note objects
+    df = pd.read_csv("interactive.csv")
 
-    ...
-    topics += self._topic
-
-    option = input("which option: ")
     while option != "quit":
+       option = input("which option: ")
         if option == "options":
-            ...
+            print("quit, options, topics, note")
         elif option == "topics":
-            print(f"{topics}")
+            print(df[0])
         elif option == "note":
             choice = input("which note: ")
-            if choice ...: #if choice in note object
-                print(...)
-        else ...:
-            ...
-        option = input("which option: ")
+            if df["topic"] == choice: #if choice in note object
+                print(df[df["topic"] == choice])
+        else:
+            print("incorrect input, for optiopns type options")
 
 
 If __name__ == "__main__":

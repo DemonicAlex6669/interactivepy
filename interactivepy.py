@@ -1,21 +1,22 @@
-include pandas as pd
+import pandas as pd
 
-Def main():
+def main():
     df = pd.read_csv("interactive.csv")
 
-    while option != "quit":
-       option = input("which option: ")
+    while True:
+        option = input("which option: ")
         if option == "options":
-            print("quit, options, topics, note")
+            print("exit, options, topics, note")
         elif option == "topics":
-            print(df[0])
+            print(df.iloc[:,0])
         elif option == "note":
             choice = input("which note: ")
-            if df["topic"] == choice: #if choice in note object
-                print(df[df["topic"] == choice])
+            print(df[df["topic"] == choice])
+        elif option == "exit":
+            break
         else:
             print("incorrect input, for optiopns type options")
 
 
-If __name__ == "__main__":
+if __name__ == "__main__":
     main()
